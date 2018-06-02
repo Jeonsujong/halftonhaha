@@ -1,21 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>가입자 목록</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        
-      </tr>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= user.image1_file_name %>" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">
+            <%= user.nickname %><br>
+            <%= user.email %><br>
+            <%= user.sex %><br>
+          </p>
+        </div>
+      </div>
+
     <% end %>
   </tbody>
 </table>
