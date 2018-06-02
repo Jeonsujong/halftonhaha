@@ -1,60 +1,22 @@
 <h1 style="color:white"> Piece which you'd like </h1>
 
 <hr>
-
-<div class="row justify-content-center" style="margin-top: 5%;">
-  	<div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
-   		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image1.url(:medium) %>" alt="Card image cap">
-        		<div class="card-body">
-	          		<p class="card-text">
-	          		</p>
-        		</div>
-      	</div>
-    </div>
-    <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
-   		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image2.url(:medium) %>" alt="Card image cap">
-        		<div class="card-body">
-	          		<p class="card-text">
-	          		</p>
-        		</div>
-      	</div>
-    </div>
-    <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
-   		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image3.url(:medium) %>" alt="Card image cap">
-        		<div class="card-body">
-	          		<p class="card-text">
-	          		</p>
-        		</div>
-      	</div>
-    </div>
-    <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
-   		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image4.url(:medium) %>" alt="Card image cap">
-        		<div class="card-body">
-	          		<p class="card-text">
-	          		</p>
-        		</div>
-      	</div>
-    </div>
-    <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
-   		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image5.url(:medium) %>" alt="Card image cap">
-        		<div class="card-body">
-	          		<p class="card-text">
-	          		</p>
-        		</div>
-      	</div>
-    </div>
-</div>
+<%= render 'normalpage'%>
 <hr>
 
 <h4 style = "color: white">저기요..!</h4><br>
 <ul>
-  <% @user_posts.each do |up| %>
-    <li><%= link_to up.title, post_path %></li>
+
+  <% if user_signed_in? %>
+    <% @user_posts.each do |up| %>
+      <% if up.current_user_id == current_user.id || up.this_user_id == current_user.id %>
+        <li><%= link_to up.title, post_path %></li>
+      <% end %>
+    <% end %>
+  <% else %>
+    <%= link_to '로그인하고 오세요^^', new_user_session_path %>
   <% end %>
+
 </ul>
+
 <%= render 'form', post: @post %>

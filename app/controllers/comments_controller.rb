@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment.page_user_id = @post.this_user_id
 
     if @comment.save
-      redirect_to "/"
+      redirect_to :back
     end
   end
 end
