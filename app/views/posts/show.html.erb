@@ -13,7 +13,6 @@
 </div>
 
 
-<h3>Add comments</h3>
 <% if user_signed_in? %>
   <% if @post.this_user_id == current_user.id || @post.current_user_id == current_user.id %>
     <%= render 'comments/form' %>
