@@ -8,6 +8,6 @@ class CommentsController < ApplicationController
 
     if @comment.save
       redirect_to "/"
-    else 
+    end
   end
 end

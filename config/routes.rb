@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   root "posts#index"
 
@@ -7,5 +9,5 @@ Rails.application.routes.draw do
 
   get '/my_page/:id' => 'posts#my_page'
 
-  
+
 end
