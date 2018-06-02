@@ -13,11 +13,12 @@
 ActiveRecord::Schema.define(version: 20180602063348) do
 
   create_table "comments", force: :cascade do |t|
-    t.text     "content"
+    t.string   "title"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "nickname"
+    t.integer  "user_page_id"
     t.integer  "page_user_id"
   end
 
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 20180602063348) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "current_user_id"
+    t.integer  "other_user_id"
     t.integer  "this_user_id"
   end
 
