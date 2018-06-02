@@ -4,7 +4,7 @@
   <% @users.each do |user| %>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
       <div class="card-body">
-        <img class="card-img-top" src="<%= user.image1_file_name %>" alt="Card image cap">
+        <img class="card-img-top" src="<%= user.image1.url(:medium) %>" alt="Card image cap">
         <div class="card-body">
           <p class="card-text">
             <%= user.nickname %><br>
