@@ -1,26 +1,19 @@
-<p id="notice"><%= notice %></p>
-
 <h1>가입자 목록</h1>
 
-  <div class="row justify-content-center" style="margin-top: 5%;">
-    <% @users.each do |user| %>
-      <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
+<div class="row justify-content-center" style="margin-top: 5%;">
+  <% @users.each do |user| %>
+    <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
+      <div class="card-body">
+        <img class="card-img-top" src="<%= user.image1_file_name %>" alt="Card image cap">
         <div class="card-body">
-            <img class="card-img-top" src="<%= user.image1_file_name %>" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">
-                <%= user.nickname %><br>
-                <%= user.email %><br>
-                <%= user.sex %><br>
-              </p>
-            </div>
-          </div>
+          <p class="card-text">
+            <%= user.nickname %><br>
+            <%= user.email %><br>
+            <%= user.sex %><br>
+            <a href="/my_page/<%= user.id%>" class="btn btn-primary">Go somewhere</a>
+          </p>
         </div>
-
-    <% end %>
-  </div>
-
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+      </div>
+    </div>
+  <% end %>
+</div>
