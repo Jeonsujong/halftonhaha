@@ -66,6 +66,7 @@ class PostsController < ApplicationController
   end
 
   def my_page
+    @post = Post.new
     @user = User.find(params[:id])
   end
 
@@ -77,6 +78,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :this_user_id, :current_user_id)
+      params.require(:post).permit(:title, :current_user_id, :this_user_id)
     end
 end

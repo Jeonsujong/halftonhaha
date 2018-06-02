@@ -1,0 +1,26 @@
+# -*- shell-script -*-
+# Copyright 1999-2018 ImageMagick Studio LLC
+# Definitions of optional features and configuration values for this build.
+# Intended for use by test scripts.
+MAGICK_FEATURES='DPC HDRI Cipher OpenMP'
+top_srcdir='/home/ubuntu/workspace/ImageMagick'
+top_builddir='/home/ubuntu/workspace/ImageMagick'
+
+set -a
+COMPARE="/home/ubuntu/workspace/ImageMagick/utilities/magick compare"
+COMPOSITE="/home/ubuntu/workspace/ImageMagick/utilities/magick composite"
+CONJURE="/home/ubuntu/workspace/ImageMagick/utilities/magick conjure"
+CONVERT="/home/ubuntu/workspace/ImageMagick/utilities/magick convert"
+DISPLAY="/home/ubuntu/workspace/ImageMagick/utilities/magick display"
+IDENTIFY="/home/ubuntu/workspace/ImageMagick/utilities/magick identify"
+MAGICK="/home/ubuntu/workspace/ImageMagick/utilities/magick"
+MONTAGE="/home/ubuntu/workspace/ImageMagick/utilities/magick montage"
+VALIDATE="/home/ubuntu/workspace/ImageMagick/tests/validate"
+DRAWTEST="/home/ubuntu/workspace/ImageMagick/tests/drawtest"
+WANDTEST="/home/ubuntu/workspace/ImageMagick/tests/wandtest"
+LD_LIBRARY_PATH="/home/ubuntu/workspace/ImageMagick/MagickCore/.libs:/home/ubuntu/workspace/ImageMagick/MagickWand/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/home/ubuntu/workspace/ImageMagick/coders"
+MAGICK_CONFIGURE_PATH="/home/ubuntu/workspace/ImageMagick/config:/home/ubuntu/workspace/ImageMagick/config"
+MAGICK_FILTER_MODULE_PATH="/home/ubuntu/workspace/ImageMagick/filters"
+PATH="/home/ubuntu/workspace/ImageMagick/utilities:/home/ubuntu/workspace/ImageMagick/tests:${PATH}"
+set +a
