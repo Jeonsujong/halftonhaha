@@ -4,7 +4,6 @@
 
   <div class="row justify-content-center" style="margin-top: 5%;">
     <% @users.each do |user| %>
-<<<<<<< HEAD
       <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
         <div class="card-body">
             <img class="card-img-top" src="<%= user.image1_file_name %>" alt="Card image cap">
@@ -16,26 +15,8 @@
               </p>
             </div>
           </div>
-        </div>  
-=======
-
-        <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
-          <div class="card-body">
-              <img class="card-img-top" src="<%= user.image1.url(:medium) %>" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">
-                  <%= user.nickname %><br>
-                  <%= user.email %><br>
-                  <%= user.sex %><br>
-                </p>
-                <p>
-                  <% link_to %>
-                </p>
-              </div>
-            </div>
-
         </div>
->>>>>>> f47883663820f16a9fbace92c8a0ea4a0b5f7529
+
     <% end %>
   </div>
 
