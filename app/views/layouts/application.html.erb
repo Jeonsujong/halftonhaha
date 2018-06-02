@@ -8,8 +8,8 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <div class="container" >
+      <a class="navbar-brand" href="/posts/">조각조각</a>
       <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarColor02" aria-label="Toggle navigation" type="button" data-target="#navbarColor02" data-toggle="collapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -18,27 +18,27 @@
         <ul class="navbar-nav mr-auto">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to "마이페이지"  %>
+              <a class="nav-link" href="/my_page/<%= current_user.id %>"> 마이페이지</a>
             </li>&nbsp&nbsp
             <li class="nav-item">
-              <%= link_to "프로필 편집", edit_user_registration_path %>
+              <a class="nav-link" href="/users/edit">프로필 편집</a>
             </li>&nbsp&nbsp
             <li class="nav-item">
-              <%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
+              <a class="nav-link" href="/users/sign_out" data-method="delete">로그아웃</a>
             </li>
           <% else %>
             <li class="nav-item">
-              <%= link_to "로그인", new_user_session_path %>
+              <a class="nav-link" href="/users/sign_in/">로그인</a>
             </li> &nbsp&nbsp
             <li class="nav-item">
-              <%= link_to "회원가입", new_user_registration_path %>
+              <a class="nav-link" href="/users/sign_up/">회원가입</a>
             </li>
           <% end %>
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control mr-sm-2" type="text" placeholder="'ㅇㅇ'이(가) 예쁜 사람♡">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">검색</button>
         </form>
       </div>
     </div>
