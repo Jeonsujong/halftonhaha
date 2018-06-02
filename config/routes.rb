@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   devise_for:users
 
-  get 'posts/my_page/id' => 'posts#my_page'
+  get '/my_page/:id' => 'posts#my_page'
 
 
 end
