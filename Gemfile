@@ -45,7 +45,9 @@ group :development do
   gem 'spring'
 end
 
+gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'rails_db'
 gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'masonry-rails', '~> 0.2.4'
