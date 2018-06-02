@@ -12,5 +12,13 @@
   <%= render @post.comments %>
 </div>
 
-<%= render 'comments/form' %>
-<%= link_to 'Back', :back %>
+
+<h3>Add comments</h3>
+<% if user_signed_in? %>
+  <% if @post.this_user_id == current_user.id || @post.current_user_id == current_user.id %>
+    <%= render 'comments/form' %>
+  <% end %>
+<% else %>
+  <%= link_to '로그인하고 오세요^^', new_user_session_path %>
+<% end %>
+

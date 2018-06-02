@@ -56,9 +56,18 @@
   <%= render 'normalpage'%>
 <%end%>
 <h4 style = "color: white">저기요..!</h4><br>
+
 <ul>
-  <% @user_posts.each do |up| %>
-    <li><%= link_to up.title, post_path %></li>
+  <% if user_signed_in? %>
+    <% @user_posts.each do |up| %>
+      <% if up.current_user_id == current_user.id || up.this_user_id == current_user.id %>
+        <li><%= link_to up.title, post_path %></li>
+      <% end %>
+    <% end %>
+  <% else %>
+    <%= link_to '로그인하고 오세요^^', new_user_session_path %>
   <% end %>
+
 </ul>
+
 <%= render 'form', post: @post %>
