@@ -1,7 +1,8 @@
 <h1 style="color:white"> Piece which you'd like </h1>
 
-<hr>
 
+<hr>
+<% if current_user.id == @user.id %>
 <div class="row justify-content-center" style="margin-top: 5%;">
   	<div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
    		<div class="card-body">
@@ -21,6 +22,7 @@
         		</div>
       	</div>
     </div>
+
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
    		<div class="card-body">
         	<img class="card-img-top" src="<%= @user.image3.url(:medium) %>" alt="Card image cap">
@@ -50,7 +52,9 @@
     </div>
 </div>
 <hr>
-
+<%else%>
+  <%= render 'normalpage'%>
+<%end%>
 <h4 style = "color: white">저기요..!</h4><br>
 <ul>
   <% @user_posts.each do |up| %>

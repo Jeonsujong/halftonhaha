@@ -13,7 +13,9 @@
     </div>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
       <div class="card-body">
+        <%if @post.comments.count > 5%>
           <img class="card-img-top" src="<%= @user.image2.url(:medium) %>" alt="Card image cap">
+        <%end%>
             <div class="card-body">
                 <p class="card-text">
                 </p>
@@ -22,7 +24,9 @@
     </div>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
       <div class="card-body">
+        <%if @post.comments.count > 10%>
           <img class="card-img-top" src="<%= @user.image3.url(:medium) %>" alt="Card image cap">
+        <%end%>
             <div class="card-body">
                 <p class="card-text">
                 </p>
@@ -31,7 +35,9 @@
     </div>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
       <div class="card-body">
+        <%if @post.comments.count > 15%>
           <img class="card-img-top" src="<%= @user.image4.url(:medium) %>" alt="Card image cap">
+        <%end%>
             <div class="card-body">
                 <p class="card-text">
                 </p>
@@ -40,7 +46,9 @@
     </div>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
       <div class="card-body">
+        <%if @post.comments.count > 20%>
           <img class="card-img-top" src="<%= @user.image5.url(:medium) %>" alt="Card image cap">
+        <%end%>
             <div class="card-body">
                 <p class="card-text">
                 </p>
