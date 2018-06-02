@@ -18,13 +18,13 @@
         <ul class="navbar-nav mr-auto">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <a class="nav-link" href="/my_page/:id/">마이페이지</a>
+              <a class="nav-link" href="/my_page/<%= current_user.id %>"> 마이페이지</a>
             </li>&nbsp&nbsp
             <li class="nav-item">
               <a class="nav-link" href="/users/edit">프로필 편집</a>
             </li>&nbsp&nbsp
             <li class="nav-item">
-              <a class="nav-link" href="/users/sign_out">로그아웃</a>
+              <a class="nav-link" href="/users/sign_out" data-method="delete">로그아웃</a>
             </li>
           <% else %>
             <li class="nav-item">
