@@ -7,47 +7,47 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarColor02" aria-label="Toggle navigation" type="button" data-target="#navbarColor02" data-toggle="collapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor02">
-          <ul class="navbar-nav mr-auto">
-            <% if user_signed_in? %>
-              <li class="nav-item">
-                <%= link_to "마이페이지"  %>
-              </li>&nbsp&nbsp
-              <li class="nav-item">
-                <%= link_to "프로필 편집", edit_user_registration_path %>
-              </li>&nbsp&nbsp
-              <li class="nav-item">
-                <%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
-              </li>
-            <% else %>
-              <li class="nav-item">
-                <%= link_to "로그인", new_user_session_path %>
-              </li> &nbsp&nbsp
-              <li class="nav-item">
-                <%= link_to "회원가입", new_user_registration_path %>
-              </li>
-            <% end %>
-
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarColor02" aria-label="Toggle navigation" type="button" data-target="#navbarColor02" data-toggle="collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "마이페이지"  %>
+            </li>&nbsp&nbsp
+            <li class="nav-item">
+              <%= link_to "프로필 편집", edit_user_registration_path %>
+            </li>&nbsp&nbsp
+            <li class="nav-item">
+              <%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "로그인", new_user_session_path %>
+            </li> &nbsp&nbsp
+            <li class="nav-item">
+              <%= link_to "회원가입", new_user_registration_path %>
+            </li>
+          <% end %>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
     </div>
+  </nav>
+  <div class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
