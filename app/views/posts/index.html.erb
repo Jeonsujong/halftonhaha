@@ -4,7 +4,6 @@
 
   <div class="row justify-content-center" style="margin-top: 5%;">
     <% @users.each do |user| %>
-
       <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
         <div class="card-body">
             <img class="card-img-top" src="<%= user.image1_file_name %>" alt="Card image cap">
@@ -17,8 +16,11 @@
               </p>
             </div>
           </div>
+
         </div>  
+
         </div>
+
     <% end %>
   </div>
 
