@@ -4106,6 +4106,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-item {
   margin-bottom: -1px;
+    color: white;
 }
 
 .nav-tabs .nav-link {
@@ -4161,6 +4162,7 @@ input[type="button"].btn-block {
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: center;
+
 }
 
 .tab-content > .tab-pane {
