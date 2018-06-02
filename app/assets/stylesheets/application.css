@@ -11,6 +11,58 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+ /* comments */
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+#comments {
+	h2 {
+		margin: 3em 0 1em 0;
+		border-bottom: 1px solid #d6dce0;
+		padding-bottom: 0.5em;
+	}
+	h3 {
+		margin-top: 2em;
+	}
+	.comment {
+		border-bottom: 1px solid #d6dce0;
+		padding: 1.5em 2em;
+		.clear_both {
+			clear: both;
+		}
+		&:after {
+			clear: both;
+		}
+		.comment_content {
+			float: left;
+			.comment_name {
+				margin: 1em 0 0 0;
+				font-size: 0.7em;
+				text-transform: uppercase;
+			}
+			.comment_body {
+				font-size: 1.2em;
+				margin: 0.2em 0 0 0;
+			}
+			.comment_time {
+				margin-top: 1.2em;
+				font-size: .8em;
+			}
+		}
+		.button {
+			float: right;
+		}
+	}
+	input[type="text"], textarea {
+		width: 50%;
+	}
+}
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 :root {
   --blue: #007bff;
@@ -9623,4 +9675,3 @@ legend {
 .list-group-item h6 {
   color: inherit;
 }
-

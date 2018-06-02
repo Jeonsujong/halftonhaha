@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+
   end
 
   # GET /posts/1/edit
@@ -36,7 +37,6 @@ class PostsController < ApplicationController
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
-
     end
   end
 
@@ -65,8 +65,16 @@ class PostsController < ApplicationController
   end
 
   def my_page
-    @user = User.find(params[:id])
     @post = Post.new
+    @user = User.find(params[:id])
+
+    @user_posts = []
+    @posts = Post.all
+    @posts.each do |p|
+      if p.this_user_id == @user.id
+          @user_posts << p
+      end
+    end
   end
 
   private

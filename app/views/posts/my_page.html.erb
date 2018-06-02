@@ -47,11 +47,14 @@
 	          		</p>
         		</div>
       	</div>
-    </div>  
+    </div>
 </div>
 <hr>
 
 <h4 style = "color: white">저기요..!</h4><br>
-
+<ul>
+  <% @user_posts.each do |up| %>
+    <li><%= link_to up.title, post_path %></li>
+  <% end %>
+</ul>
 <%= render 'form', post: @post %>
-
