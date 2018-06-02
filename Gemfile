@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+gem 'rails_db'
+
+gem 'devise'
+
+gem 'paperclip'
