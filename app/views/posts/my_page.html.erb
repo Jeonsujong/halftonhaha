@@ -5,7 +5,7 @@
 <div class="row justify-content-center" style="margin-top: 5%;">
   	<div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
    		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image1_file_name %>" alt="Card image cap">
+        	<img class="card-img-top" src="<%= @user.image1.url(:medium) %>" alt="Card image cap">
         		<div class="card-body">
 	          		<p class="card-text">
 	          		</p>
@@ -14,7 +14,7 @@
     </div>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
    		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image2_file_name %>" alt="Card image cap">
+        	<img class="card-img-top" src="<%= @user.image2.url(:medium) %>" alt="Card image cap">
         		<div class="card-body">
 	          		<p class="card-text">
 	          		</p>
@@ -23,7 +23,7 @@
     </div>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
    		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image3_file_name %>" alt="Card image cap">
+        	<img class="card-img-top" src="<%= @user.image3.url(:medium) %>" alt="Card image cap">
         		<div class="card-body">
 	          		<p class="card-text">
 	          		</p>
@@ -32,7 +32,7 @@
     </div>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
    		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image4_file_name %>" alt="Card image cap">
+        	<img class="card-img-top" src="<%= @user.image4.url(:medium) %>" alt="Card image cap">
         		<div class="card-body">
 	          		<p class="card-text">
 	          		</p>
@@ -41,7 +41,7 @@
     </div>
     <div class="card mb-3" style="width: 18rem; margin: 10px 10px;">
    		<div class="card-body">
-        	<img class="card-img-top" src="<%= @user.image5_file_name %>" alt="Card image cap">
+        	<img class="card-img-top" src="<%= @user.image5.url(:medium) %>" alt="Card image cap">
         		<div class="card-body">
 	          		<p class="card-text">
 	          		</p>
@@ -49,8 +49,12 @@
       	</div>
     </div>  
 </div>
-
 <hr>
-<h1>This is Apply</h1>
+
+<h1>This is Apply</h1><br>
+
+<%= render 'form', post: @post %>
+
+<%= link_to 'Back', posts_path %>
 
 
