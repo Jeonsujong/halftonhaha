@@ -46,7 +46,6 @@ group :development do
 end
 
 gem 'rails_db'
-
 gem 'devise'
-
 gem 'paperclip'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
