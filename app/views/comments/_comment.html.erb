@@ -1,13 +1,12 @@
 <div class="comment clearfix">
   <div class="comment_content">
-    <p class="comment_name">
-      
+    <p class="comment_name" style = "color:white">
       <strong><%= comment.nickname %></strong>
     </p>
-    <p class="comment_body">
+    <p class ="comment_body" style = "color:white">
       <%= comment.content %>
     </p>
-    <p class="comment_time">
+    <p class="comment_time" style = "color:white">
       <% time_ago_in_words(comment.created_at) %>
     </p>
     

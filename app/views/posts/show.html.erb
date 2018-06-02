@@ -8,12 +8,9 @@
   <%= @post.title %>
 </p>
 <div id="comments">
-  <h2><%= @post.comments.count %>&nbsp Comments</h2>
+  <h3 style = "color:#F8CDE9"><%= @post.comments.count %>&nbsp Comments</h3>
   <%= render @post.comments %>
 </div>
 
-
-
-<h3>Add comments</h3>
 <%= render 'comments/form' %>
 <%= link_to 'Back', :back %>
