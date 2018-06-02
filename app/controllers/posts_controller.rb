@@ -11,12 +11,13 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    user = 
+    @user = User.find(@post.this_user_id)
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+
   end
 
   # GET /posts/1/edit
@@ -66,7 +67,6 @@ class PostsController < ApplicationController
 
   def my_page
     @user = User.find(params[:id])
-    @post = Post.new
   end
 
   private
@@ -77,6 +77,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title)
+      params.require(:post).permit(:title, :this_user_id, :current_user_id)
     end
 end
